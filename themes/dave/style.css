@@ -21,16 +21,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 body {
-<<<<<<< HEAD
 	/*background-color:#eee;*/
-=======
->>>>>>> FETCH_HEAD
 	font-family: 'futura-mediumregular';
 	letter-spacing:1px;
-}
-
-h1, h2 {
-	margin-top:0px;
 }
 
 .border-box {
@@ -43,20 +36,17 @@ h1, h2 {
 
 #page {
 	width:100%;
-<<<<<<< HEAD
 	padding:10px 10px 10px 360px;
-=======
-	padding:10px 10px 10px 270px;
->>>>>>> FETCH_HEAD
 }
 
 #secondary {
 	position:fixed;
 	left:0px;
 	top:0px;
-	width:260px;
+	width:350px;
 	height:100%;
-	padding:20px;
+	padding:10px;
+	background-color:#fff;
 }
 
 body.admin-bar #secondary { 
@@ -67,10 +57,7 @@ body.admin-bar #secondary {
 	float:left;
 	width:300px;
 	height:350px;
-<<<<<<< HEAD
 	/*background-color:#FFC;*/
-=======
->>>>>>> FETCH_HEAD
 	margin:10px;
 	overflow:hidden;
 }
