@@ -36,16 +36,16 @@ body {
 
 #page {
 	width:100%;
-	padding:10px 10px 10px 360px;
+	padding:10px 10px 10px 260px;
 }
 
 #secondary {
 	position:fixed;
 	left:0px;
 	top:0px;
-	width:350px;
+	width:250px;
 	height:100%;
-	padding:10px;
+	padding:20px;
 	background-color:#fff;
 }
 
