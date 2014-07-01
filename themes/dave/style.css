@@ -21,7 +21,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 body {
-	/*background-color:#eee;*/
+	background-color:#eee;
 	font-family: 'futura-mediumregular';
 	letter-spacing:1px;
 }
@@ -36,16 +36,16 @@ body {
 
 #page {
 	width:100%;
-	padding:10px 10px 10px 260px;
+	padding:10px 360px 10px 10px;
 }
 
 #secondary {
 	position:fixed;
-	left:0px;
+	right:0px;
 	top:0px;
-	width:250px;
+	width:350px;
 	height:100%;
-	padding:20px;
+	padding:10px;
 	background-color:#fff;
 }
 
@@ -54,15 +54,15 @@ body.admin-bar #secondary {
 }
 
 .post-index {
-	float:left;
+	display:inline-block;
 	width:300px;
 	height:350px;
-	/*background-color:#FFC;*/
+	background-color:#FFC;
 	margin:10px;
 	overflow:hidden;
 }
 
 #colophon {
-	clear:both;
+	clear:left;
 	padding:10px 20px 20px 20px;
 }
