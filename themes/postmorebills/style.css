@@ -56,6 +56,8 @@ h1.site-name {
 #page {
 	padding:15px 15px 15px 250px;
 	max-width: 1273px;
+	position:relative;
+
 }
 
 #secondary {
@@ -76,7 +78,7 @@ body.admin-bar #secondary {
 }
 
 .post-index {
-	display:inline-block;
+	float:left;
 	width:300px;
 	height:350px;
 	margin:18px;
@@ -112,18 +114,29 @@ body.admin-bar #secondary {
 }
 
 #single-post-container {
+	display:none;
 	padding:18px;
 	height:430px;
-	display:none;
+}
+
+#loading {
+	width:16px;
+	height:16px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-8px;
+	margin-top:-8px;
+	display:none;	
 }
 
 #post-gallery {
 	float:left;
-	width:400px;
 	background-color:#ededed;
 	height:430px;
 	width:636px;
-	padding:25px;
+	padding:25px 25px 15px 25px;
+	overflow:hidden;
 }
 
 #post-description {
@@ -132,17 +145,105 @@ body.admin-bar #secondary {
 	height:430px;
 	background-color:#ea5946;
 	padding:25px;
-}
-
-#post-description p {
-	color:#fff !important;
+	color:#fff;
+	position:relative;
 }
 
 #post-description p:first-child {
 	margin-top:0px;	
 }
 
+#close-post {
+	z-index:10;
+	cursor:pointer;
+	position:absolute;
+	top:18px;
+	right:18px;
+	width:30px;
+	height:30px;
+		
+}
+
+#slides {
+	width:586px;
+	height:380px;
+	text-align:center;
+	position:relative;
+}
+
+#slides > div { 
+    position: absolute; 
+    top: 0px; 
+    left: 42px; 
+}
+
+#slides img{
+    display: inline-block;
+    max-width: 586px;
+    max-height: 380px;
+	-webkit-box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.45);
+	-moz-box-shadow:    4px 4px 10px 0px rgba(50, 50, 50, 0.45);
+	box-shadow:         4px 4px 10px 0px rgba(50, 50, 50, 0.45);
+}
+
+
 #colophon {
 	clear:left;
 	padding:10px 20px 20px 20px;
+}
+
+@media only screen and (max-width: 1273px)  {
+	
+	#post-description {
+		clear:both;
+		float:left;
+		width:636px;
+		height:auto;
+		margin-bottom:10px;
+		margin-top:30px;	
+	}
+	
+	#page {
+		max-width: 940px;
+	}
+}
+
+@media only screen and (max-width: 937px)  {
+	
+	#post-gallery {
+		height: 240px;
+		width: 300px;
+	}
+	
+	#single-post-container {
+		height: 236px;
+	}
+	
+	#post-description {
+		width: 300px;
+	}
+	
+	#page {
+		max-width: 600px;
+	}
+	
+	#slides {
+		width: 250px;
+		height: 210px;
+			
+	}
+	
+	#slides > div { 
+    	left: 0px; 
+	}
+	
+	#slides img{
+		width:100%;
+		height:auto;	
+	}
+	
+	#post-gallery {
+		height: 236px;
+	}
+	
 }

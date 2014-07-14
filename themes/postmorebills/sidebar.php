@@ -25,5 +25,5 @@
 		
 	?>
 	
-	
+<div id="loading"><img src="<?php echo get_template_directory_uri(); ?>/img/loading.gif" /></div>	
 </div><!-- #secondary -->
