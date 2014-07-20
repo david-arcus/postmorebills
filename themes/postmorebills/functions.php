@@ -48,7 +48,7 @@ function pmb_post_gallery($output, $attr) {
         $img = wp_get_attachment_image_src($id, 'full');
 
         //$output .= "<img src=\"{$img[0]}\" width=\"{$img[1]}\" height=\"{$img[2]}\" alt=\"\" />\n";
-		$output .= "<div><img src=\"{$img[0]}\" height=\"100%\" alt=\"\" class=\"bjqs\" /></div>\n";
+		$output .= "<div><img src=\"{$img[0]}\" alt=\"\" class=\"bjqs\" /></div>\n";
     }
 
     $output .= "</div>\n";

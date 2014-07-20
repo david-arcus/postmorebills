@@ -8,7 +8,7 @@ endif;
 <div id="post-description" class="border-box">
 <?php
 	while ( have_posts() ) : the_post();
-		echo '<p>' . get_the_title() . '<br />';
+		echo '<p><span style="font-size:16px;">' . get_the_title() . '</span><br />';
 		echo get_the_date() . '</p>';
 	endwhile;
 	
@@ -16,5 +16,8 @@ endif;
 
 	echo nl2br(strip_shortcodes($post->post_content));
 ?>
-<div id="close-post"><img src="<?php echo get_template_directory_uri(); ?>/img/close.png" /></div>
+<div id="close-post"><img src="<?php echo get_template_directory_uri(); ?>/img/close.png?z=aer" /></div>
+<div id="slide-controls">
+	<span id="prev"><</span> <span id="next">></span> <span id="current">1</span> / <span id="total">4</span>
+</div>
 </div>

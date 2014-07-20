@@ -25,7 +25,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="border-box">
-<div id="single-post-container"></div>
+	<!--<div id="single-post-container"></div>-->
 
 <!--
 <header id="masthead" class="site-header" role="banner">
@@ -33,3 +33,4 @@
 </div>
 </header>
 <!-- #masthead -->
+	<div id="post-preview-wrapper">

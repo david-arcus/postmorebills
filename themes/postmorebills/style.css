@@ -22,8 +22,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 body {
 	font-family: 'futura-mediumregular';
-	letter-spacing:1px;
+	letter-spacing:1.5px;
 	font-size:16px;
+	color:#191919;	
 }
 
 h1, h2 {
@@ -33,7 +34,7 @@ h1, h2 {
 
 a {
 	text-decoration:none;
-	color:#000;	
+	color:#191919;	
 }
 
 a:hover {
@@ -43,6 +44,7 @@ a:hover {
 h1.site-name {
 	color:#ff1a17;
 	margin-bottom:16px;
+	font-weight:normal;
 }
 
 .border-box {
@@ -147,6 +149,7 @@ body.admin-bar #secondary {
 	padding:25px;
 	color:#fff;
 	position:relative;
+	font-size:14px;
 }
 
 #post-description p:first-child {
@@ -157,10 +160,10 @@ body.admin-bar #secondary {
 	z-index:10;
 	cursor:pointer;
 	position:absolute;
-	top:18px;
-	right:18px;
-	width:30px;
-	height:30px;
+	top:25px;
+	right:25px;
+	width:14px;
+	height:14px;
 		
 }
 
@@ -174,7 +177,9 @@ body.admin-bar #secondary {
 #slides > div { 
     position: absolute; 
     top: 0px; 
-    left: 42px; 
+    left: 0px; 
+	opacity:0;
+
 }
 
 #slides img{
@@ -186,10 +191,35 @@ body.admin-bar #secondary {
 	box-shadow:         4px 4px 10px 0px rgba(50, 50, 50, 0.45);
 }
 
+#slide-controls {
+	font-size:14px;
+	position:absolute;
+	bottom:25px;
+	left:25px;	
+}
+
+#slide-controls #prev, #slide-controls #next {
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:13px;
+	cursor:pointer;
+}
+
+#slide-controls #next {
+	padding-left:10px;
+}
+
+#slide-controls #current {
+	padding-left:10px;	
+	
+}
 
 #colophon {
 	clear:left;
 	padding:10px 20px 20px 20px;
+}
+
+#single-post-container {
+	overflow:auto;
 }
 
 @media only screen and (max-width: 1273px)  {
@@ -206,6 +236,11 @@ body.admin-bar #secondary {
 	#page {
 		max-width: 940px;
 	}
+	
+	#single-post-container {
+		overflow:visible;	
+	}
+	
 }
 
 @media only screen and (max-width: 937px)  {
@@ -216,7 +251,7 @@ body.admin-bar #secondary {
 	}
 	
 	#single-post-container {
-		height: 236px;
+		height: 240px;
 	}
 	
 	#post-description {
@@ -238,12 +273,12 @@ body.admin-bar #secondary {
 	}
 	
 	#slides img{
-		width:100%;
-		height:auto;	
+		max-width: 250px;
+   		max-height: 194px;
 	}
 	
 	#post-gallery {
-		height: 236px;
+		height: 240px;
 	}
 	
 }

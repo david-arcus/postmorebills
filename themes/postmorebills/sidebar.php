@@ -1,3 +1,5 @@
+</div><!-- #post-preview-wrapper -->
+	
 <div id="secondary" class="border-box">
 	<?php
 		$name = get_bloginfo( 'name', 'display' );
