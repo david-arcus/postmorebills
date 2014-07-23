@@ -24,7 +24,7 @@ body {
 	font-family: 'futura-mediumregular';
 	letter-spacing:1.5px;
 	font-size:16px;
-	color:#191919;	
+	color:#333333;	
 }
 
 h1, h2 {
@@ -34,7 +34,7 @@ h1, h2 {
 
 a {
 	text-decoration:none;
-	color:#191919;	
+	color:#333333;	
 }
 
 a:hover {
@@ -45,6 +45,10 @@ h1.site-name {
 	color:#ff1a17;
 	margin-bottom:16px;
 	font-weight:normal;
+}
+
+#mobile-nav-button {
+	display:none;
 }
 
 .border-box {
@@ -82,7 +86,7 @@ body.admin-bar #secondary {
 .post-index {
 	float:left;
 	width:300px;
-	height:350px;
+	height:330px;
 	margin:18px;
 	overflow:hidden;
 }
@@ -113,6 +117,11 @@ body.admin-bar #secondary {
 
 .post-index a:hover {
 	text-decoration:none;
+}
+
+.post-index a.tahoma {
+	font-family:Tahoma, Geneva, sans-serif;	
+	font-size: 12px;
 }
 
 #single-post-container {
@@ -174,16 +183,11 @@ body.admin-bar #secondary {
 	position:relative;
 }
 
-#slides > div { 
-    position: absolute; 
+#slides img{
+	position: absolute; 
     top: 0px; 
     left: 0px; 
-	opacity:0;
-
-}
-
-#slides img{
-    display: inline-block;
+	display:none;
     max-width: 586px;
     max-height: 380px;
 	-webkit-box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.45);
@@ -191,8 +195,13 @@ body.admin-bar #secondary {
 	box-shadow:         4px 4px 10px 0px rgba(50, 50, 50, 0.45);
 }
 
+#slides img:first-child {
+	display:block;
+	opacity:0;
+}
+
 #slide-controls {
-	font-size:14px;
+	font-size:12px;
 	position:absolute;
 	bottom:25px;
 	left:25px;	
@@ -200,7 +209,7 @@ body.admin-bar #secondary {
 
 #slide-controls #prev, #slide-controls #next {
 	font-family:Tahoma, Geneva, sans-serif;
-	font-size:13px;
+	font-size:12px;
 	cursor:pointer;
 }
 
@@ -279,6 +288,54 @@ body.admin-bar #secondary {
 	
 	#post-gallery {
 		height: 240px;
+	}
+	
+}
+
+@media only screen and (max-width: 597px)  {
+
+	#secondary {
+		position: fixed;
+		left: -260px;
+	}
+	
+	#page {
+		padding: 15px 0px;
+
+	}
+	
+	#post-preview-wrapper {
+		margin:auto;
+		width:300px;
+		overflow:auto;	
+	}
+	
+	.post-index {
+
+		margin: 0px;
+
+	}
+	
+	#single-post-container {
+		
+		width:300px;
+		padding:0px;	
+		
+	}
+	
+	#mobile-nav-button {
+		display:block;
+		width:300px;
+		margin:auto;
+		text-align:left;
+		font-size:36px;
+		padding-bottom:20px;
+		line-height: 36px;
+	}
+	
+	#secondary {
+		background-color:#fff;
+		padding: 20px 24px;
 	}
 	
 }

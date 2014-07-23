@@ -10,7 +10,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/normalize.css" type="text/css" media="screen" />
@@ -25,6 +25,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="border-box">
+<div id="mobile-nav-button">&#9776;</div>
 	<!--<div id="single-post-container"></div>-->
 
 <!--

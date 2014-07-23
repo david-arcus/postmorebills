@@ -48,10 +48,19 @@ function pmb_post_gallery($output, $attr) {
         $img = wp_get_attachment_image_src($id, 'full');
 
         //$output .= "<img src=\"{$img[0]}\" width=\"{$img[1]}\" height=\"{$img[2]}\" alt=\"\" />\n";
-		$output .= "<div><img src=\"{$img[0]}\" alt=\"\" class=\"bjqs\" /></div>\n";
+		$output .= "<img src=\"{$img[0]}\" alt=\"\" />\n";
     }
 
     $output .= "</div>\n";
 	
     return $output;
+}
+
+function get_excerpt($count){
+	$permalink = get_permalink($post->ID);
+	$excerpt = get_the_content();
+	$excerpt = strip_tags($excerpt);
+	$excerpt = substr($excerpt, 0, $count);
+	$excerpt = $excerpt.'<br /><a href="'.$permalink.'" class="tahoma">&gt;</a>';
+	return $excerpt;
 }

@@ -18,6 +18,6 @@ endif;
 ?>
 <div id="close-post"><img src="<?php echo get_template_directory_uri(); ?>/img/close.png?z=aer" /></div>
 <div id="slide-controls">
-	<span id="prev"><</span> <span id="next">></span> <span id="current">1</span> / <span id="total">4</span>
+	<span id="prev"><</span> <span id="next">></span> <span id="current"></span> / <span id="total"></span>
 </div>
 </div>

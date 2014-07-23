@@ -5,5 +5,5 @@
  	</div>
 		<a href="<?php the_permalink(); ?>" class="post-link"><span class="title"><?php the_title(); ?></span></a>
 		<span class="date"><?php echo get_the_date(); ?></span>
-		<a href="<?php the_permalink(); ?>" class="post-link"><span class="description"><?php echo wp_strip_all_tags( get_the_excerpt() ); ?></span></a>
+		<a href="<?php the_permalink(); ?>" class="post-link"><span class="description"><?php echo get_excerpt(150); ?></span></a>
 </div>
