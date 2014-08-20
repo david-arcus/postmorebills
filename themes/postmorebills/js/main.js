@@ -10,8 +10,43 @@ function insertAtIndex(i) {
     $("#post-preview-wrapper > div:nth-child(" + (i - 1) + ")").after("<div id='single-post-container'></div>");
 }
 
+function removeImagePadding() {
+	
+	$('#slides img').css('left','0px');	
+	
+}
 
+function alignImages() {
+					
+	var $slides = $('#slides');
+	var $images = $('#slides img');
+	var $galleryContainer = $('#post-gallery');
+						
+	// align images in centre
+	$images.each(function(index, element) {
+		
+		var left = parseInt(($galleryContainer.width() - $(this).width()) / 2);
+		
+		$(this).css('left',left + 'px');
+	});
+	
+	$("#slides img").first().animate({'opacity':'1'});
+						
+}
+	
+$(window).resize(function() {
+	
+	alignImages();
+		
+});
 
+$(window).load(function() {
+			
+	alignImages();
+			
+});
+	
+	
 $(document).ready(function() {
  
 	$.ajaxSetup({cache:false});
@@ -100,19 +135,8 @@ $(document).ready(function() {
 				
 				
 				$post_container.html(data).promise().done(function() {
-					var $slides = $('#slides');
-					var $images = $('#slides img');
-					var $galleryContainer = $('#post-gallery');
-										
-					// align images in centre
-					$images.each(function(index, element) {
-						
-						var left = parseInt(($galleryContainer.width() - $(this).width()) / 2);
-						
-						$(this).css('left',left + 'px');
-					});
 					
-					$("#slides img").first().animate({'opacity':'1'});
+					alignImages();
 					
 					//$images.first().animate({'opacity':'1'});
         		});
