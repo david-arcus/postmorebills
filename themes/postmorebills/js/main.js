@@ -89,6 +89,8 @@ $(document).ready(function() {
 		var $link_href = $(this).data("url");
 		var $leftOffset = $(this).offset().left;
 		
+		var $clickedElement = $(this);
+		
 		/*
 		Object {top: 65, left: 268} main.js:32
 		Object {top: 465, left: 604} main.js:32
@@ -142,6 +144,10 @@ $(document).ready(function() {
         		});
 				
 				
+				//scroll to cicked element
+				$('html, body').animate({
+        			scrollTop:  $clickedElement.offset().top
+    			}, 700);
 				
 				// close link
 				var $closepost = $("#close-post");	
