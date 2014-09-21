@@ -8,8 +8,8 @@ endif;
 <div id="post-description" class="border-box">
 <?php
 	while ( have_posts() ) : the_post();
-		echo '<p><span style="font-size:14px;">' . get_the_title() . '</span><br />';
-		echo get_the_date() . '</p>';
+		echo '<p><span style="font-size:12px;">' . get_the_title() . '</span><br />';
+		echo '<span style="font-size:10px;">' . get_the_date() . '</p>';
 	endwhile;
 	
 	global $post;

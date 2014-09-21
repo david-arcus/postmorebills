@@ -88,6 +88,7 @@ $(document).ready(function() {
 		
 		var $link_href = $(this).data("url");
 		var $leftOffset = $(this).offset().left;
+		var $topOffset = $(this).offset().top;
 		
 		var $clickedElement = $(this);
 		
@@ -97,24 +98,27 @@ $(document).ready(function() {
 		Object {top: 865, left: 940} main.js:32
 		*/
 		
-		if ($leftOffset <= 268) {
+		console.log($leftOffset);
+		
+		if ($leftOffset <= 281) {
 			insertAtIndex($(this).index()+1);
 		}
 		
 		
-		if (($leftOffset > 268)  && ($leftOffset <= 604)) {
+		if (($leftOffset > 281)  && ($leftOffset <= 617)) {
 			
 			insertAtIndex($(this).index());	
 			
 		}
 		
-		if ($leftOffset > 604) {
+		if ($leftOffset > 617) {
 			
 			insertAtIndex($(this).index()-1);	
 			
 		}	
 		
 		var $post_container = $("#single-post-container");
+		
 				
 		$.ajax({
 			type: "GET",
@@ -144,10 +148,25 @@ $(document).ready(function() {
         		});
 				
 				
+				// scroll to clicked element unless it's in the top row, in which case scroll to top of page
+				var scrollDestination;
+				
+				var $post_gallery = $('#post-gallery');
+				
+				if ($topOffset > 100) {
+					scrollDestination = $post_gallery.offset().top-100;
+				} else {
+					scrollDestination = $('body').top;
+				}
+				
 				//scroll to cicked element
 				$('html, body').animate({
-        			scrollTop:  $clickedElement.offset().top
+        			scrollTop:  scrollDestination
     			}, 700);
+				
+				
+				
+				console.log($topOffset);
 				
 				// close link
 				var $closepost = $("#close-post");	
