@@ -156,7 +156,7 @@ $(document).ready(function() {
 				if ($topOffset > 100) {
 					scrollDestination = $post_gallery.offset().top-100;
 				} else {
-					scrollDestination = $('body').top;
+					scrollDestination = 0;
 				}
 				
 				//scroll to cicked element
@@ -181,9 +181,10 @@ $(document).ready(function() {
 				});			
 			}
 		}); // ajax
-		
-		
 	});
+	
+	console.log(screen.width + ' x ' + screen.height);
+	
 });
 
 $(document).ajaxComplete(function() {
