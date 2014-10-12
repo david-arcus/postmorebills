@@ -242,7 +242,40 @@ body.admin-bar #secondary {
 	overflow:auto;
 }
 
+@media only screen and (max-width: 1291px)  {
+	
+	#page {
+		
+		-webkit-transform: scale(0.8);  /* Chrome, Opera 15+, Safari 3.1+ */
+		-ms-transform: scale(0.8);  /* IE 9 */
+		transform: scale(0.8);  /* Firefox 16+, IE 10+, Opera */
+				
+		-ms-transform-origin: 0 0; /* IE 9 */
+		-webkit-transform-origin: 0 0; /* Chrome, Safari, Opera */
+		transform-origin: 0 0;
+		
+		width: 1606px;
+		max-width:none;
+		
+	}
+	
+	body, html {
+		
+		overflow-x:hidden;
+			
+	}
+	
+}
+
+
+
 @media only screen and (max-width: 1220px)  {
+	
+	body, html {
+		
+		overflow-x:auto;	
+		
+	}
 	
 	#post-description {
 		clear:both;
@@ -254,7 +287,11 @@ body.admin-bar #secondary {
 	}
 	
 	#page {
-		max-width: 940px;
+		max-width: 940px !important;
+		width:auto !important;
+		-webkit-transform: none !important;  /* Chrome, Opera 15+, Safari 3.1+ */
+		-ms-transform: none !important;  /* IE 9 */
+		transform: none !important;  /* Firefox 16+, IE 10+, Opera */
 	}
 	
 	#single-post-container {
@@ -274,6 +311,7 @@ body.admin-bar #secondary {
 		position:static;
 		padding: 20px 0px 20px 0px;
 	}
+
 	
 }
 
@@ -320,7 +358,7 @@ body.admin-bar #secondary {
 	
 }
 
-@media only screen and (max-width: 566px)  {
+@media only screen and (max-width: 613px)  {
 
 	#secondary {
 		position: fixed;
@@ -377,3 +415,4 @@ body.admin-bar #secondary {
 	}
 	
 }
+

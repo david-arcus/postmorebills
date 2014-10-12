@@ -28,7 +28,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="border-box">
 <div id="mobile-nav-button">&#9776;</div>
-	<!--<div id="single-post-container"></div>-->
+<!--<div id="single-post-container"></div>-->
 
 <!--
 <header id="masthead" class="site-header" role="banner">
